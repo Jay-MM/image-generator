@@ -1,7 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { download } from '../assets'
 import {downloadImage } from '../utils'
+
+Card.propTypes = {
+  _id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  prompt: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired,
+};
+
 
 const Card = ({ _id, name, prompt, photo }) => {
   return (

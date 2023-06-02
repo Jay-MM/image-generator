@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-import { Loader, Card, Form } from '../components'
+import { Loader, Card, Form, } from '../components'
+
+import PropTypes from 'prop-types'
 
 const RenderCards = ({ data, title}) => {
   if(data && data.length > 0) {
@@ -57,6 +59,10 @@ const Home = () => {
       }, 500)
     )
   }
+  RenderCards.propTypes = {
+    data: PropTypes.array,
+    title: PropTypes.string
+  };
 
   return (
     <section className='max-w-7xl mx-auto'>
